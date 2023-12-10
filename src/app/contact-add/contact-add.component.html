@@ -1,0 +1,69 @@
+<main>
+    <div class="row">
+        <div class="col-md-8 mx-auto">
+            <h3 class="text-center">Ajout d'un nouveau contact</h3>
+            <div class="row g-3">
+                <div class="col-sm-6">
+                    <label for="firstName" class="form-label">Prénom:</label>
+                    <input type="text" class="form-control" id="firstName" placeholder="fadi" value="" required>
+                </div>
+                <div class="col-sm-6">
+                    <label for="lastName" class="form-label">Nom :</label>
+                    <input type="text" class="form-control" id="lastName" placeholder="kn" value="" required>
+                </div>
+                <div class="col-sm-6">
+                    <label for="phone" class="form-label">Téléphone :</label>
+                    <input type="text" class="form-control" id="phone" placeholder="24420508" value="" required>
+                </div>
+                <div class="col-6">
+                    <label for="email" class="form-label">Email: <span class="text-muted">(Optional)</span></label>
+                    <input type="email" class="form-control" id="email" placeholder="fadi2003@example.com">
+                </div>
+                <div class="col-6">
+                    <label for="description" class="form-label">Description</label>
+                    <input type="text" class="form-control" id="description">
+                </div>
+                <div class="col-md-5">
+                    <label for="country" class="form-label">Type:</label>
+                    <select class="form-select" id="country" required>
+                        <option value="Friend">Ami</option>
+                        <option value="Work">Travail</option>
+                        <option value="Family">Famille</option>
+                    </select>
+                </div>
+                <hr class="my-4">
+                <button class="w-30 btn btn-primary btn-lg" type="submit" style="max-width:'200px'">Ajouter</button>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <main>
+
+        <div class="row row-cols-1 mb-1 text-center">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Nom</th>
+                        <th scope="col">Prénom</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Description</th>
+                        <th scope="col">Type</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="col" *ngFor="let item of listContacts; let i=index">
+                        <th>{{item.firstName}}</th>
+                        <th>{{item.lastName}}</th>
+                        <th>{{item.email}}</th>
+                        <th>{{item.description}}</th>
+                        <th>{{item.type}}</th>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </main>
+
+</main>
